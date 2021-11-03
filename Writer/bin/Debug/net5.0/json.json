@@ -1,0 +1,44 @@
+[
+  {
+    "ThreadId": 1,
+    "ElapsedTime": 517,
+    "Methods": [
+      {
+        "ElapsedTime": 109,
+        "MethodName": "foo",
+        "ClassName": "Foo",
+        "methods": []
+      },
+      {
+        "ElapsedTime": 408,
+        "MethodName": "bar",
+        "ClassName": "Bar",
+        "methods": []
+      }
+    ]
+  },
+  {
+    "ThreadId": 5,
+    "ElapsedTime": 406,
+    "Methods": [
+      {
+        "ElapsedTime": 406,
+        "MethodName": "\u003Cbar\u003Eb__2_0",
+        "ClassName": "Bar",
+        "methods": []
+      }
+    ]
+  },
+  {
+    "ThreadId": 6,
+    "ElapsedTime": 405,
+    "Methods": [
+      {
+        "ElapsedTime": 405,
+        "MethodName": "\u003Cbar\u003Eb__2_1",
+        "ClassName": "Bar",
+        "methods": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Serialization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Tracer1": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Serialization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Serialization.dll": {}
+        }
+      },
+      "SerializationLib/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/SerializationLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SerializationLib.dll": {}
+        }
+      },
+      "Tracer1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SerializationLib": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tracer1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tracer1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Serialization/1.0.0": {
+      "type": "project",
+      "path": "../Serialization/Serialization.csproj",
+      "msbuildProject": "../Serialization/Serialization.csproj"
+    },
+    "SerializationLib/1.0.0": {
+      "type": "project",
+      "path": "../SerializationLib/SerializationLib.csproj",
+      "msbuildProject": "../SerializationLib/SerializationLib.csproj"
+    },
+    "Tracer1/1.0.0": {
+      "type": "project",
+      "path": "../Tracer1/Tracer1.csproj",
+      "msbuildProject": "../Tracer1/Tracer1.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Serialization >= 1.0.0",
+      "Tracer1 >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Анастасия\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Анастасия\\RiderProjects\\Tracer1\\Writer\\Writer.csproj",
+      "projectName": "Writer",
+      "projectPath": "C:\\Users\\Анастасия\\RiderProjects\\Tracer1\\Writer\\Writer.csproj",
+      "packagesPath": "C:\\Users\\Анастасия\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Анастасия\\RiderProjects\\Tracer1\\Writer\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Анастасия\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\Анастасия\\RiderProjects\\Tracer1\\Serialization\\Serialization.csproj": {
+              "projectPath": "C:\\Users\\Анастасия\\RiderProjects\\Tracer1\\Serialization\\Serialization.csproj"
+            },
+            "C:\\Users\\Анастасия\\RiderProjects\\Tracer1\\Tracer1\\Tracer1.csproj": {
+              "projectPath": "C:\\Users\\Анастасия\\RiderProjects\\Tracer1\\Tracer1\\Tracer1.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

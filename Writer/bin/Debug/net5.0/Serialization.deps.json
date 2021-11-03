@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Serialization/1.0.0": {
+        "dependencies": {
+          "Tracer1": "1.0.0"
+        },
+        "runtime": {
+          "Serialization.dll": {}
+        }
+      },
+      "Tracer1/1.0.0": {
+        "dependencies": {
+          "SerializationLib": "1.0.0"
+        },
+        "runtime": {
+          "Tracer1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Serialization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tracer1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

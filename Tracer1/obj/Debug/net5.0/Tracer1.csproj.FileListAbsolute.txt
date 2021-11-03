@@ -1,0 +1,16 @@
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\bin\Debug\net5.0\Tracer1.exe
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\bin\Debug\net5.0\Tracer1.deps.json
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\bin\Debug\net5.0\Tracer1.runtimeconfig.json
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\bin\Debug\net5.0\Tracer1.runtimeconfig.dev.json
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\bin\Debug\net5.0\Tracer1.dll
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\bin\Debug\net5.0\ref\Tracer1.dll
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\bin\Debug\net5.0\Tracer1.pdb
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.csproj.AssemblyReference.cache
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.AssemblyInfoInputs.cache
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.AssemblyInfo.cs
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.csproj.CoreCompileInputs.cache
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.dll
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\ref\Tracer1.dll
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.pdb
+C:\Users\Анастасия\RiderProjects\Tracer1\Tracer1\obj\Debug\net5.0\Tracer1.genruntimeconfig.cache
