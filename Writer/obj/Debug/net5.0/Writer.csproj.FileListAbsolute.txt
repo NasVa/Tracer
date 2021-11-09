@@ -22,7 +22,6 @@ C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\Writer
 C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\Writer.AssemblyInfoInputs.cache
 C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\Writer.AssemblyInfo.cs
 C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\Writer.csproj.CoreCompileInputs.cache
-C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\Writer.csproj.CopyComplete
 C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\Writer.dll
 C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\ref\Writer.dll
 C:\Users\Анастасия\RiderProjects\Tracer1\Writer\obj\Debug\net5.0\Writer.pdb
