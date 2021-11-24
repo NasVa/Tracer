@@ -8,11 +8,13 @@ namespace Tracer1
     {
         [XmlAttribute]
         public long Time { get; set; }
+        
         [XmlAttribute]
         public string MethodName { get; set; }
+        
         [XmlAttribute]
         public string ClassName { get; set; }
-        public ImmutableList<MethodInfo> methods { get; internal set;  }
+        public ImmutableList<MethodInfo> methods { get; internal set;  } 
 
         public MethodInfo() { }
 

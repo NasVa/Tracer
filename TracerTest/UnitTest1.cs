@@ -1,81 +1,48 @@
+using System;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Tracer1;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace TracerTest
 {
-    [TestClass]
-    public class TracerTest
-    {
-        private ITracer _tracer;
-        private Foo _foo;
-
-        [TestInitialize]
-        public void Initialize()
-        {
-            _tracer = new Tracer1.Tracer();
-            _foo = new Foo(_tracer);
-        }
-
-        [TestMethod]
-        public void SingleThreadTest()
-        {
-            _foo.MyMethod();
-            var result = _tracer.GetTraceResult();
-            Assert.AreEqual(1, result.Threads.Count);
-        }
-
-        [TestMethod]
-        public void InnerThreadCreationTest()
-        {
-            _foo.MyMethodWithThreads();
-            var result = _tracer.GetTraceResult();
-            Assert.AreEqual(2, result.Threads.Count);
-        }
-
-        [TestMethod]
-        public void MultipleThreadsTest()
-        {
-            Thread t1 = new Thread(_foo.MyMethodWithThreads);
-            Thread t2 = new Thread(_foo.MyMethodWithThreads);
-            t1.Start();
-            t2.Start();
-            t1.Join();
-            t2.Join();
-            var result = _tracer.GetTraceResult();
-            Assert.AreEqual(4, result.Threads.Count);
-        }
-    }
-
     public class Foo
     {
-        private Bar _bar;
+        public Bar bar;
         private ITracer _tracer;
-
-        public ITracer Tracer => _tracer;
 
         internal Foo(ITracer tracer)
         {
             _tracer = tracer;
-            _bar = new Bar(_tracer);
+            bar = new Bar(_tracer);
         }
 
-        public void MyMethod()
+        public void MyMethod1()           //метод в методе
         {
             _tracer.StartTrace();
-            _bar.InnerMethod();
+            Thread.Sleep(100);
+            bar.MyMethod2();
             _tracer.StopTrace();
         }
 
-        public void MyMethodWithThreads()
+        public void MyMethod3()
         {
             _tracer.StartTrace();
-            Thread thread = new Thread(_bar.InnerMethod);
-            thread.Start();
-            thread.Join();
-            Thread.Sleep(10);
+            Thread.Sleep(100);
+            Thread tr3 = new Thread(bar.MyMethod2);
+            tr3.Start();
+            tr3.Join();
             _tracer.StopTrace();
         }
+        
+        public void MyMethod4()      //метод
+        {
+            _tracer.StartTrace();
+            Thread.Sleep(300);
+            _tracer.StopTrace();
+        }
+        
     }
 
     public class Bar
@@ -87,11 +54,68 @@ namespace TracerTest
             _tracer = tracer;
         }
 
-        public void InnerMethod()
+        public void MyMethod2()     
         {
             _tracer.StartTrace();
-            Thread.Sleep(20);
+            Thread.Sleep(200);
             _tracer.StopTrace();
         }
+    }
+    
+    public class Tests
+    {
+        private ITracer tracer;
+        private Foo foo;
+        
+        [SetUp]
+        public void Setup()
+        {
+            tracer = new Tracer();
+            foo = new Foo(tracer);
+        }
+
+        [Test]
+        public void MethodDataTest()                       //на метод и класс
+        {
+            foo.bar.MyMethod2();
+            TraceResult result = tracer.GetTraceResult();
+            Assert.AreEqual("MyMethod2", result.Threads[0].Methods[0].MethodName);
+            Assert.AreEqual("Bar", result.Threads[0].Methods[0].ClassName);
+            Console.WriteLine("MethodDataTest");
+            Console.WriteLine(result.Threads[0].Methods[0].Time);
+            
+        }
+        
+        [Test]
+        public void InnerMethodTest()                 //на метод в методе
+        {
+            foo.MyMethod1();
+            TraceResult result = tracer.GetTraceResult();
+            Assert.AreEqual("MyMethod1", result.Threads[0].Methods[0].MethodName);
+            Assert.AreEqual("MyMethod2", result.Threads[0].Methods[0].methods[0].MethodName);
+            Assert.AreEqual("Foo", result.Threads[0].Methods[0].ClassName);
+            Assert.AreEqual(1, result.Threads[0].Methods.Count);
+            Assert.AreEqual(1, result.Threads[0].Methods[0].methods.Count);
+            Console.WriteLine("InnerMethodTest");
+            Console.WriteLine(result.Threads[0].Methods[0].Time);
+            Console.WriteLine(result.Threads[0].Methods[0].methods[0].Time);
+        }
+        
+
+        [Test]
+        public void ThreadsTest()
+        {
+            Thread t1 = new Thread(foo.MyMethod1);
+            Thread t2 = new Thread(foo.MyMethod4);
+            t1.Start();
+            t2.Start();
+            t1.Join();
+            t2.Join();
+            TraceResult result = tracer.GetTraceResult();
+            Assert.AreEqual(2, result.Threads.Count);
+            Console.WriteLine(result.Threads[0].Methods[0].Time);
+            Console.WriteLine(result.Threads[1].Methods[0].Time);
+        }
+        
     }
 }

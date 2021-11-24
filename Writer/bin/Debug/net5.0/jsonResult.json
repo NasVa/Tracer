@@ -1,0 +1,44 @@
+[
+  {
+    "ThreadId": 1,
+    "Time": 521,
+    "Methods": [
+      {
+        "Time": 107,
+        "MethodName": "foo",
+        "ClassName": "Foo",
+        "methods": []
+      },
+      {
+        "Time": 414,
+        "MethodName": "bar",
+        "ClassName": "Bar",
+        "methods": []
+      }
+    ]
+  },
+  {
+    "ThreadId": 5,
+    "Time": 413,
+    "Methods": [
+      {
+        "Time": 413,
+        "MethodName": "\u003Cbar\u003Eb__2_0",
+        "ClassName": "Bar",
+        "methods": []
+      }
+    ]
+  },
+  {
+    "ThreadId": 6,
+    "Time": 412,
+    "Methods": [
+      {
+        "Time": 412,
+        "MethodName": "\u003Cbar\u003Eb__2_1",
+        "ClassName": "Bar",
+        "methods": []
+      }
+    ]
+  }
+]

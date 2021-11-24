@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-16"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Threads>
+    <thread ThreadId="1" Time="521">
+      <Methods>
+        <method Time="107" MethodName="foo" ClassName="Foo">
+          <methods />
+        </method>
+        <method Time="414" MethodName="bar" ClassName="Bar">
+          <methods />
+        </method>
+      </Methods>
+    </thread>
+    <thread ThreadId="5" Time="413">
+      <Methods>
+        <method Time="413" MethodName="&lt;bar&gt;b__2_0" ClassName="Bar">
+          <methods />
+        </method>
+      </Methods>
+    </thread>
+    <thread ThreadId="6" Time="412">
+      <Methods>
+        <method Time="412" MethodName="&lt;bar&gt;b__2_1" ClassName="Bar">
+          <methods />
+        </method>
+      </Methods>
+    </thread>
+  </Threads>
+</root>
